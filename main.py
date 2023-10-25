@@ -1,7 +1,6 @@
 import tkinter
 
 
-
 BMI_dictionary = { "Underweight": 18.4, 
                    "Normal weight": 24.9, 
                    "Overweight": 29.9, 
@@ -22,7 +21,7 @@ def check_validation():
          
     except:
         
-        result_label.config(text="it is not a valid value")
+        result_label.config(text="It is not a valid value")
         return False
     
 
@@ -32,7 +31,7 @@ def BMI_calculator():
     if check_validation():
 
         length_m = length/100
-        BMI_value = weight/(length_m * length_m)
+        BMI_value = weight/(length_m ** 2)
 
         for key, value in BMI_dictionary.items():
 
@@ -43,7 +42,7 @@ def BMI_calculator():
                 result_label.config(text=f"BMI value: {BMI_value:.2f}\n You are {key}")
                 break
 
-            elif BMI_value > BMI_dictionary["Extreme obesity"]:
+            elif BMI_value > BMI_dictionary.get("Extreme obesity"):
 
                 result_label.config(text=f"BMI value: {BMI_value:.2f}\n You are Extreme obesity")
                 break
@@ -69,6 +68,7 @@ def start_widow():
     window = tkinter.Tk()
     window.title("BMI Calculator")
     window.minsize(width=250, height=160)
+    window.config(padx=20,pady=20)
 
 
     #Widget
