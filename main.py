@@ -51,7 +51,6 @@ def BMI_calculator():
             
 
 
-
 def button_clicked():
     
     # result_label.config(text="button clicked")
@@ -79,11 +78,11 @@ def start_widow():
     global cm_entry 
     global result_label 
 
-    kg_label = tkinter.Label(text="Enter Your Weight (kg)", fg="black", font=("Ariel",10,""))
-    cm_label = tkinter.Label(text="Enter Your Height (cm)", fg="black", font=("Ariel",10,""))
+    kg_label = tkinter.Label(text="Enter Your Weight (kg)", fg="black", font=("",11,""))
+    cm_label = tkinter.Label(text="Enter Your Height (cm)", fg="black", font=("",11,""))
     kg_entry = tkinter.Entry(width=20)
     cm_entry = tkinter.Entry(width=20)
-    result_label = tkinter.Label(font=("",10,""))
+    result_label = tkinter.Label(font=("",11,""))
     
 
     # button
@@ -101,5 +100,6 @@ def start_widow():
     result_label.pack()
 
     tkinter.mainloop()
+
 
 start_widow()
